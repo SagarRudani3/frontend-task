@@ -8,7 +8,7 @@ import { generateRandomAlert } from "@/lib/utils";
 interface AlertCardProps {
   title: string;
   count: number;
-  icon: LucideIcon;
+  icon: any;
   color: string;
   description: string;
 }
