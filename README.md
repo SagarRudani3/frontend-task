@@ -1,96 +1,42 @@
-# ✨ Frontend Developer Assignment: Without Simbian vs With Simbian
+# Simbian Security Operations Experience
 
-## 🧠 Objective
-Create a visually engaging and interactive webpage using Next.js + Tailwind CSS + an animation library of choice (Framer Motion, GSAP, React Spring, etc.). The page contrasts the "Without Simbian" vs "With Simbian" security operations experience, showcasing the dramatic difference in performance, outcomes, and visual storytelling. It must be responsive across multiple devices eg: Desktop, Mobile, Tablet etc
+This project demonstrates the stark contrast between traditional security operations and Simbian's enhanced approach using an interactive, animated interface. Built with Next.js 13, Tailwind CSS, and Framer Motion, the application showcases real-time alert handling, automated responses, and comprehensive security analysis through engaging visualizations and smooth animations. The design emphasizes the transformation from overwhelming alert volumes and manual processes to Simbian's streamlined, AI-driven security operations.
 
-## Check video reference for more details
+## Thought Process & Design Decisions
 
-Video Link [https://github.com/user-attachments/assets/754c12a8-e262-4bbf-95ea-9df64b28dad3]
-If above link not working try this
+The design approach focused on creating a clear visual narrative that highlights the challenges of traditional security operations versus Simbian's innovative solution. The "Without Simbian" section intentionally uses stress-inducing colors (red, yellow, orange) and increasing numbers to convey overwhelming alert volumes. In contrast, the "With Simbian" section employs calming greens and zeros to demonstrate efficient threat management. The step-by-step flow was designed to break down complex security processes into digestible, visually connected stages.
 
-Video link [https://drive.google.com/drive/folders/1yeklCMBqYDDoCgnyqcqqwQhpyV5uBi3L?usp=drive_link]
+## Technical Implementation
 
-## 📄 What to Build
+The application leverages Framer Motion for fluid animations, chosen for its declarative API and powerful animation capabilities. Key animation features include:
+- Smooth count transitions using Framer Motion's `animate` prop
+- Alert card shake effects on new notifications
+- Staggered animations in the process flow using custom delays
+- Responsive layout transitions across different screen sizes
 
-### 🔴 Section 1 – Without Simbian
-Design 3 cards:
-- **Ignored Alerts**
-- **Wrongly Closed Alerts**
-- **Active Threats**
+Real-time alert generation is implemented using React's useState and useEffect hooks, with carefully timed intervals to simulate incoming security alerts. The responsive design adapts seamlessly across devices using Tailwind CSS's utility classes and custom breakpoints.
 
-Each card shows:
-- Count (starting with: Ignored Alerts = 200, Wrongly Closed = 35, Active Threats = 5)
-- Related icon (SVG icons)
-- Real-time dummy alerts (e.g., "Phishing Email", "Suspicious Login") that drop with animation every few seconds
+## Known Issues & Future Improvements
 
-Animations include:
-- The count increasing
-- The alert card receiving a new alert (shake, glow, slide, bounce)
+1. Performance Optimizations:
+   - Implement virtualization for long alert lists
+   - Optimize animation performance on lower-end devices
+   - Add debouncing for rapid alert updates
 
-Sample content lines:
-- Wasting valuable analyst time on false positives
-- Processing one alert at a time, missing the big picture
-- More time fixing SOAR automation, less time on real threats
+2. Enhanced Features:
+   - Add interactive tooltips for deeper insights into each security stage
+   - Implement drill-down views for detailed alert information
+   - Create animated transitions between "Without" and "With" sections
+   - Add filter options for different types of security alerts
 
-### 🟢 Section 2 – With Simbian
-Display a step-by-step horizontal animation/flow that includes:
-- **Triaged & Reported** – SOC Agent handled investigation and reporting
-- **Automated Response** – Incident automatically contained
-- **Comprehensive Analysis** – AI recognized patterns
-- **Accurate Detection** – Zero false positives
-- **24/7 Coverage** – No analyst fatigue
+3. Accessibility:
+   - Enhance keyboard navigation
+   - Add ARIA labels for animated elements
+   - Implement reduced motion preferences
+   - Improve color contrast for better readability
 
-Use side arrows or connecting lines to show progression.
-
-At the end, show 3 cards similar to the previous section, but with:
-- Ignored Alerts: 0
-- Wrongly Closed: 0
-- Active Threats: 0
-
-Animate these counts to stay 0 (fade-in gently, checkmark animation, etc.)
-
-Sample summaries:
-- 90% of alerts resolved automatically, 24/7
-- Correlates alerts to your environment
-- Investigate every alert—no SOAR needed
-
-## ✅ Requirements
-
-- Use Next.js with the App Router (Next.js 13+ or 14)
-- Style with Tailwind CSS
-- Use any animation library (Framer Motion preferred, but open)
-- Keep the UI visually appealing and responsive
-- Code must be:
-  - Well-structured (clear folder/component organization)
-  - Reusable (split into components)
-  - Scalable (can be extended easily)
-  - Responsive (mobile + tablet + desktop)
-- Add dummy alert data (randomized or cycled examples)
-- Include comments and good naming conventions
-
-## ❌ Restrictions
-
-- Don't use UI kits like MUI, Bootstrap, or Chakra (Tailwind only)
-- Don't hardcode everything in one component/page
-- Don't use non-responsive layouts
-- Don't use actual backend services – keep it client-side only
-
-## 🧪 Evaluation Criteria
-
-| Criteria | Description |
-|----------|-------------|
-| ✅ UI/UX | Is the experience clean, polished, and intuitive across screen sizes? |
-| ✅ Code Quality | Is the code well-structured, reusable, and scalable? |
-| ✅ Animation | Are animations smooth, purposeful, and performant? |
-| ✅ Attention to Detail | Did you capture both storylines effectively and clearly? |
-| ✅ Creativity | Is there any extra polish or innovation in your storytelling or flow? |
-
-## ⏰ Time Expectation
-This is expected to be a 24 to 36-hour task for most experienced developers. If it takes more, prioritize quality in the most impactful areas.
-
-## 📦 Submission
-- Share a GitHub repo link with deployment on Vercel or another platform
-- Include a short README (1-2 paragraphs) describing:
-  - Your thought process
-  - Animation library used
-  - Any known issues or improvements you would make with more time
+4. User Experience:
+   - Add interactive elements to demonstrate alert handling
+   - Implement dark/light theme support
+   - Create more detailed alert statistics and visualizations
+   - Add export functionality for alert reports
